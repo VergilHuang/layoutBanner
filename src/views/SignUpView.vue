@@ -3,18 +3,27 @@
     <div class="container">
       <div class="sp-msg-box">
         <div class="sp-msg">
-          <p class="sp-msg-ecgm">{{msg.encouragement}}</p>
-          <h1 class="sp-msg-wel">{{msg.welcome}}</h1>
-          <p class="sp-msg-dt">{{msg.detail}}</p>
+          <p class="sp-msg-ecgm">
+            {{ msg.encouragement }}
+          </p>
+          <h1 class="sp-msg-wel">
+            {{ msg.welcome }}
+          </h1>
+          <p class="sp-msg-dt">
+            {{ msg.detail }}
+          </p>
           <div class="container sp-msg-btn">
             <button 
-            type="button" 
-            class="btn btn-rect red"
-            @click="getStarted">GET STARTED</button>
+              type="button" 
+              class="btn btn-rect red"
+              @click="getStarted"
+            >
+              GET STARTED
+            </button>
           </div>
         </div>
       </div>
-      <div class='sp-form-box'>
+      <div class="sp-form-box">
         <SignUpForm />
       </div>
     </div>
@@ -25,6 +34,9 @@ import SignUpForm from '../components/SignUpForm.vue';
 
 export default {
   name: 'SignUpView',
+  components: {
+    SignUpForm
+  },
   data: function() {
     return {
       msg: {
@@ -38,9 +50,6 @@ export default {
     getStarted() {
       alert('GET STARTED has been clicked.');
     }
-  },
-  components: {
-    SignUpForm
   }
 };
 </script>

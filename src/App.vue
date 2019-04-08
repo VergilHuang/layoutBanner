@@ -8,12 +8,12 @@
 import SignUpView from './views/SignUpView.vue';
 
 export default {
-  name: 'app',
-  data: function() {
-    return {};
-  },
+  name: 'App',
   components: {
     SignUpView
+  },
+  data: function() {
+    return {};
   }
 };
 </script>

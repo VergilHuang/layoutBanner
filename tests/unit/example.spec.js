@@ -1,12 +1,12 @@
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import SignUpForm from '@/components/SignUpForm.vue';
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message';
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
+describe('SignUpForm.vue', () => {
+  it('renders Form block passed', () => {
+    const msg = {};
+    const wrapper = shallowMount(SignUpForm, {
+    	attachToDocument: true
     });
-    expect(wrapper.text()).toMatch(msg);
+    expect(wrapper.contains('form')).toBe(true)
   });
 });

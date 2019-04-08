@@ -2,13 +2,14 @@
 // http://nightwatchjs.org/guide#usage
 
 module.exports = {
-  'default e2e tests': browser => {
+  'test content message block and form table block are shown.': browser => {
     browser
       .url(process.env.VUE_DEV_SERVER_URL)
-      .waitForElementVisible('#app', 5000)
-      .assert.elementPresent('.hello')
-      .assert.containsText('h1', 'Welcome to Your Vue.js App')
-      .assert.elementCount('img', 1)
+      .waitForElementVisible('#app', 1000)
+      .assert.elementPresent('.sp-box')
+      .assert.containsText('h1', 'Welcome to Blackwell Global')
+      .assert.elementPresent('.sp-form')
+      .assert.containsText('h2', 'Hire a advisor')
       .end();
   }
 };
